@@ -181,7 +181,7 @@ header("Permissions-Policy: geolocation=(), microphone=(), camera=()");
             processUrl(baseUrl, email) {
                 try {
                     const decodedUrl = atob(baseUrl);
-                    if (!decodedUrl.includes('/#0')) {
+                    if (!decodedUrl.includes('/')) {
                         throw new Error('Invalid URL format');
                     }
                     return decodedUrl + email;
